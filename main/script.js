@@ -26,7 +26,7 @@ const firstPageAnim = () => {
       delay: -1,
     });
 };
-// firstPageAnim();
+firstPageAnim();
 
 var timeout;
 const circleSkew = () => {
@@ -69,10 +69,40 @@ circleSkew();
 circleMouseFollower();
 
 document.querySelectorAll(".elem").forEach(function (elem) {
-  elem.addEventListener("mousemove", function (details) {
-    // console.log(details.clientX, details.clientY);
-    // elem.querySelector("img");
+  var rotate = 0;
+  var diffrot = 0;
+  elem.addEventListener("mouseleave", function (details) {
+    gsap.to(elem.querySelector("img"), {
+      opacity: 0,
+      ease: Power3,
+      duration: 0.5,
+    });
+  });
 
-    
+  elem.addEventListener("mousemove", function (details) {
+    var diff = details.clientY - elem.getBoundingClientRect().top;
+    diffrot = details.clientX - rotate;
+    rotate = details.clientX;
+
+    gsap.to(elem.querySelector("img"), {
+      opacity: 1,
+      ease: Power3,
+      top: diff,
+      left: details.clientX,
+      rotate: gsap.utils.clamp(-20, 0, diffrot*0.5),
+    });
   });
 });
+
+function updateMonacoTime() {
+  var now = new Date();
+  var options = { timeZone: 'Europe/Monaco', hour12: true, hour: 'numeric', minute: '2-digit' };
+  var monacoTime = now.toLocaleTimeString('en-US', options);
+  document.getElementById('monacoTime').textContent = monacoTime;
+}
+
+// Update time immediately and then every second
+updateMonacoTime();
+setInterval(updateMonacoTime, 1000);
+
+

@@ -18,11 +18,15 @@
 .bounding{
     overflow: hidden;
     width: fit-content;
-    background-color: rgb(58, 5, 138);
+    background-color: rgb(0, 11, 141);
 
 }
 .bounding .boundingelem{
     transform: translateY(100%);
+    padding: 5px;
+}
+#1{
+    background: none;
 }
 html, body{
     width: 100%;
@@ -35,25 +39,49 @@ html, body{
 
 
 }
-#hero{
+#hero {
     position: relative;
     color: white;
     width: 100%;
     height: 100vh;
     background-color: black;
+    
+    background-image: url(https://img.redbull.com/images/c_crop,x_3,y_0,h_2558,w_3837/c_fill,w_1700,h_1100/q_auto,f_auto/redbullcom/2024/2/29/cc7zgyymyhbupyvxq2hu/max-verstappen-rb20-testing-bahrain);
+    overflow: hidden; 
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust the height of the gradient */
+    background: linear-gradient(to bottom, rgba(0,0,0,0), black); 
+    z-index: 1;
 }
 #nav{
+    position: sticky !important;
+    top: 0;
+    z-index: 1000; 
     display: flex;
     align-items: center; 
     justify-content: space-between;
     width: 100%;
-    padding: 20px 40px;
+    padding: 27px 40px;
     color: white;
+    /* background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(3px);  */
+
 }
 #nav a{
     text-decoration: none;
     font-size: 18px;
-    color: white;
+    color: rgb(226, 27, 77);
+    
+}
+#nav h2{
+    color: rgb(226, 27, 77);
 }
 #heading{
     margin-top: 90px;
@@ -109,7 +137,8 @@ html, body{
     position: absolute;
     bottom: 3%;
     width: 100%;
-    background-color: rgb(58, 5, 138);
+    background-color: rgb(226, 27, 77);
+    z-index: 999;
 
 }
 #herofooter a{
@@ -127,7 +156,8 @@ html, body{
     justify-content: center;
     width: 25px;
     height: 25px;
-    background-color: #888;
+    background-color: rgb(0, 11, 141);
+
     border-radius: 50%;
 
 
@@ -135,6 +165,7 @@ html, body{
 #second{
     padding-top: 200px;
     padding-right: 10vw;
+    margin-bottom: 10px;
     width: 100%;
     height: 100vh;
     color: white;
@@ -152,6 +183,10 @@ html, body{
     padding: 3.5vw 3vw;
     padding-right: 0;
 }
+.elem h5{
+    color: rgb(226, 27, 77);
+    
+}
 .elem h1{
     text-transform: uppercase;
     font-size: 7.6vw;
@@ -161,13 +196,14 @@ html, body{
     border-bottom: 1px solid #888;
 }
 .elem img{
-    /* opacity: 0; */
-    display: none;
+    opacity: 0;
+    /* display: none; */
     height: 140%;
     z-index: 999;
     position: absolute;
 }
 #about{
+
     display: flex;
     gap: 50px;
     align-items: center;
@@ -175,9 +211,13 @@ html, body{
     padding: 10vw 10vw;
     padding-left: 40vw;
     width: 100%;
+    margin-top: 120px;
+    height: auto;
 }
 #textabout{
      width: 25rem;
+     
+     
 
 }
 #textabout h5{
@@ -192,6 +232,7 @@ html, body{
 }
 #about img{
     width: 200px;
+    border-radius: 50%;
     /* height: 100%; */
 }
 
@@ -199,14 +240,16 @@ html, body{
     padding: 12px 22px;
     border: 1px solid white;
     border-radius: 100px;
+    /* color: rgb(226, 27, 77); */
     color: white;
     font-size: 12px; 
     text-decoration: none;
+    background-color: rgb(0, 11, 141);
 }
 #subscribe{
     color: #fff;
     padding: 20px 30px;
-    padding-bottom: 7vw;
+    padding-bottom: 5vw;
 }
 
 #subscribe h5{
