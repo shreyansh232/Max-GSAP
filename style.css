@@ -136,8 +136,88 @@ html, body{
     position: absolute;
 }
 #about{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    color: white;
+    padding: 10vw 10vw;
+    padding-left: 40vw;
     width: 100%;
 }
-#imageabout{
-    
+#textabout{
+     width: 25rem;
+
 }
+#textabout h5{
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom: 10px;
+
+}
+#textabout p{
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+#about img{
+    width: 200px;
+    /* height: 100%; */
+}
+
+#textabout a{
+    padding: 12px 22px;
+    border: 1px solid white;
+    border-radius: 100px;
+    color: white;
+    font-size: 12px; 
+    text-decoration: none;
+}
+#subscribe{
+    color: #fff;
+    padding: 20px 30px;
+    padding-bottom: 7vw;
+
+
+
+}
+
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+
+}
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
