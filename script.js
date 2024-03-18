@@ -26,7 +26,7 @@ const firstPageAnim = () => {
       delay: -1,
     });
 };
-firstPageAnim();
+// firstPageAnim();
 
 var timeout;
 const circleSkew = () => {
@@ -67,3 +67,12 @@ function circleMouseFollower(xscale, yscale) {
 circleSkew();
 
 circleMouseFollower();
+
+document.querySelectorAll(".elem").forEach(function (elem) {
+  elem.addEventListener("mousemove", function (details) {
+    // console.log(details.clientX, details.clientY);
+    // elem.querySelector("img");
+
+    
+  });
+});
