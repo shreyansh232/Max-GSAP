@@ -70,11 +70,12 @@ html, body{
     font-size: 1vw;
 }
 #herofooter{
+    padding: 0 2vw;
     align-items: center;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     width: 100%;
     background-color: red;
 
